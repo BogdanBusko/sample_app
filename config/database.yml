@@ -24,6 +24,7 @@ production:
   adapter: postgresql
   encoding: unicode
   database: ddfqgfl83944ja
-  pool: 5
-  username: zxvrxisaxznhmu
-  password: c009a0e777277d849ccab651a3317805d63bf41a6c771546b07bb80c4bf1e3b6
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: myapp_production
+  username: myapp
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
