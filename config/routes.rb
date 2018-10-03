@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
 
   resources :users
+  resources :account_activations, only: [:edit]
 
   root to: 'static_pages#home'
 end
